@@ -8,7 +8,7 @@ from wallpicture.items import WallpictureItem
 class WallhavenSpider(scrapy.Spider):
     name = 'wallhaven'
     allowed_domains = ['wallhaven.cc']
-    base_url = 'https://wallhaven.cc/search?categories=110&purity=100&atleast=3840x1600&topRange=6M&sorting=toplist&order=desc&page={}'
+    base_url = 'https://wallhaven.cc/search?categories=111&purity=110&atleast=3840x1600&topRange=6M&sorting=toplist&order=desc&page={}'
     offset = 2
     start_urls = [base_url.format(offset)]
 

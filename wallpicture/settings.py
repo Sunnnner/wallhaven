@@ -13,8 +13,8 @@ BOT_NAME = 'wallpicture'
 SPIDER_MODULES = ['wallpicture.spiders']
 NEWSPIDER_MODULE = 'wallpicture.spiders'
 
-IMAGES_STORE = '/home/whitek/image'   #文件保存路径
-LOG_LEVEL = "WARNING"
+IMAGES_STORE = './image'   #文件保存路径
+# LOG_LEVEL = "WARNING"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False

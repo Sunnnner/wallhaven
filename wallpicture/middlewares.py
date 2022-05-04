@@ -75,7 +75,9 @@ class WallpictureDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
-        return None
+        proxy = "https://127.0.0.1:8889"
+        request.meta["proxy"] = proxy
+        # return request
 
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
@@ -84,8 +86,6 @@ class WallpictureDownloaderMiddleware:
         # - return a Response object
         # - return a Request object
         # - or raise IgnoreRequest
-        proxy = "https://127.0.0.1:8889"
-        request.meta["proxy"] = proxy
         return response
 
     def process_exception(self, request, exception, spider):

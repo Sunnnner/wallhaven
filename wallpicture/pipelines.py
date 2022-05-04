@@ -15,10 +15,5 @@ class ImagePipeline(ImagesPipeline):
         wallpaper_url = item['wallpaper_url']
         yield scrapy.Request(wallpaper_url)
 
-    def file_path(self, request, response=None, info=None, *, item=None):
-        item = request.meta['item']
-        filepath = item['wallpaper_name']
-        return f"full/{filepath}"
-
     def item_completed(self, results, item, info):
         return item
